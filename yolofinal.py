@@ -9,7 +9,7 @@ classes = [name.split(',')[0] for name in obj_names]
 print(classes)
 #%%
 net= cv2.dnn.readNet(model='yolov3.weights',config='yolov3.cfg',framework="DNN")
-cap=cv2.VideoCapture(0)
+cap=cv2.VideoCapture("traffic.mp4")
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
 #out = cv2.VideoWriter('video_result.avi', cv2.VideoWriter_fourcc(*'MJPG'), 10, (frame_width, frame_height))
